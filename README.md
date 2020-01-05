@@ -1,4 +1,4 @@
-![PROJECT_PHOTO](https://github.com/AlexGyver/GyverLamp/blob/master/proj_img.jpg)
+![PROJECT_PHOTO](proj_img.jpg)
 # Крутая WiFi лампа на esp8266 своими руками
 * [Описание проекта](#chapter-0)
 * [Папки проекта](#chapter-1)
@@ -42,8 +42,8 @@
 
 <a id="chapter-2"></a>
 ## Схемы
-![SCHEME](https://github.com/AlexGyver/GyverLamp/blob/master/schemes/scheme1.jpg)
-![SCHEME](https://github.com/AlexGyver/GyverLamp/blob/master/schemes/scheme2.jpg)
+![SCHEME](schemes/scheme1.jpg)
+![SCHEME](schemes/scheme2.jpg)
 
 <a id="chapter-3"></a>
 ## Материалы и компоненты
