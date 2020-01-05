@@ -35,7 +35,7 @@
 // Ссылка для менеджера плат:
 // http://arduino.esp8266.com/stable/package_esp8266com_index.json
 
-// Для WEMOS выбираем плату LOLIN(WEMOS) D1 R2 & mini
+// Для WEMOS выбираем плату LOLIN(WEMOS) D1 R1
 // Для NodeMCU выбираем NodeMCU 1.0 (ESP-12E Module)
 
 // ============= НАСТРОЙКИ =============
@@ -43,7 +43,7 @@
 #define USE_BUTTON 1    // 1 - использовать кнопку, 0 - нет
 
 // -------- ВРЕМЯ -------
-#define GMT 3              // смещение (москва 3)
+#define GMT 7              // смещение (москва 3; томск 7)
 #define NTP_ADDRESS  "europe.pool.ntp.org"    // сервер времени
 
 // -------- РАССВЕТ -------
@@ -61,7 +61,7 @@
 
 #define MATRIX_TYPE 0         // тип матрицы: 0 - зигзаг, 1 - параллельная
 #define CONNECTION_ANGLE 0    // угол подключения: 0 - левый нижний, 1 - левый верхний, 2 - правый верхний, 3 - правый нижний
-#define STRIP_DIRECTION 0     // направление ленты из угла: 0 - вправо, 1 - вверх, 2 - влево, 3 - вниз
+#define STRIP_DIRECTION 1     // направление ленты из угла: 0 - вправо, 1 - вверх, 2 - влево, 3 - вниз
 // при неправильной настройке матрицы вы получите предупреждение "Wrong matrix parameters! Set to default"
 // шпаргалка по настройке матрицы здесь! https://alexgyver.ru/matrix_guide/
 
@@ -81,8 +81,14 @@ byte IP_AP[] = {192, 168, 4, 66};   // статический IP точки до
 #define AC_PASS "12345678"
 
 // ============= ДЛЯ РАЗРАБОТЧИКОВ =============
+#ifdef ESP8266_WEMOS_D1R1
+#define LED_PIN D4
+#define BTN_PIN D3
+#else
 #define LED_PIN D4             // пин ленты
 #define BTN_PIN D2
+#endif
+
 #define MODE_AMOUNT 18
 
 #define NUM_LEDS WIDTH * HEIGHT
